@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bank Simulator | Create Account</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main class="page-shell">
+        <h1>Create account</h1>
+        <p class="intro">Enter your details and initial deposit.</p>
+
+        <form id="create-account-form" class="form-panel">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" maxlength="100" autocomplete="name" required>
+
+            <label for="account-number">Account number</label>
+            <input id="account-number" name="account_number" type="text" inputmode="numeric" pattern="[0-9]{4,20}" minlength="4" maxlength="20" autocomplete="off" required>
+
+            <label for="pin">PIN (4 to 12 digits)</label>
+            <input id="pin" name="pin" type="password" inputmode="numeric" pattern="[0-9]{4,12}" minlength="4" maxlength="12" autocomplete="new-password" required>
+
+            <label for="initial-deposit">Initial deposit</label>
+            <input id="initial-deposit" name="initial_deposit" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="0.00" required>
+
+            <p id="create-message" class="notice" role="status" aria-live="polite" hidden></p>
+            <button class="button" type="submit">Create account</button>
+        </form>
+
+        <p class="page-foot"><a href="index.html">Back to login</a></p>
+    </main>
+</body>
+</html>

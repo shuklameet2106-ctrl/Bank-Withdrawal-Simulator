@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bank Simulator | Account</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main class="page-shell" id="dashboard">
+        <div class="dashboard-heading">
+            <h1>Account</h1>
+            <button class="button button-secondary" id="logout-button" type="button">Log out</button>
+        </div>
+
+        <section class="balance-panel" aria-label="Account balance">
+            <p class="intro">Account holder</p>
+            <p class="holder-name" id="holder-name">Loading...</p>
+            <p class="intro balance-label">Current balance</p>
+            <p class="balance-amount" id="balance-amount">$0.00</p>
+        </section>
+
+        <form id="withdraw-form" class="form-panel">
+            <label for="withdrawal-amount">Withdrawal amount</label>
+            <input id="withdrawal-amount" name="amount" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="0.00" required>
+            <p id="withdraw-message" class="notice" role="status" aria-live="polite" hidden></p>
+            <button class="button" type="submit">Withdraw</button>
+        </form>
+    </main>
+</body>
+</html>
